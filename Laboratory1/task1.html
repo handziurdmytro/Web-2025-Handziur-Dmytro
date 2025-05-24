@@ -1,0 +1,62 @@
+<!-- 
+Створити html файл з формою для додавання викладача. 
+Форма повинна містити наступні поля: 
+Повне ім’я, стать, дата народження, email, телефон, 
+бажаний колір фону, країна, місто, коментар.
+-->
+<!DOCTYPE html>
+<html lang="uk-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 1</title>
+    </head>
+    <body>
+        <h1>Форма для додавання викладача</h1>
+        <form action="#" method="post"><!--# - відправлення даних на ту ж сторінку-->
+            <label for="lastname">Прізвище:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br><br>
+
+            <label for="firstname">Ім'я:</label><br>
+            <input type="text" id="firstname" name="firstname" required><br><br>
+
+            <label for="middlename">По батькові:</label><br>
+            <input type="text" id="middlename" name="middlename"><br><br>
+            
+            <p>Стать:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Чоловік</label>
+
+            <input type="radio" id="female" name="gender" value="female">  
+            <label for="female">Жінка</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Інше</label><br><br>
+
+            <label for="birthday">Дата народження:</label><br>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+            <label for="email">Електронна адреса:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phonenumber">Номер телефону:</label><br>
+            <input type="tel" id="phonenumber" name="phonenumber" placeholder="+380xx-xxx-xx-xx" required><br><br>
+
+            <label for="background">Колір тла:</label><br>
+            <input type="color" id="background" name="background"><br><br>
+
+            <label for="country">Країна:</label><br>
+            <input type="text" id="country" name="country"><br><br>
+
+            <label for="city">Місто:</label><br>
+            <input type="text" id="city" name="city"><br><br>
+
+            <label for="comment">Коментар:</label><br>
+            <textarea id="comment" name="comment" cols="36" rows="10"></textarea>
+            <br><br><br><br>
+
+            <button type="reset">Очистити Форму</button>
+            <button type="submit">Надіслати Форму</button>
+        </form>
+    </body>
+</html>
