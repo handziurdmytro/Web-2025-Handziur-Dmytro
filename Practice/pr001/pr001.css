@@ -1,0 +1,21 @@
+.background{
+    background: #838b24;
+}
+.nc{
+    width: 40px;
+    height: 40px;
+
+    padding: 15px;
+    padding-left: 20px;
+
+    border: 10px solid black;
+    border-left-width: 20px;
+
+    margin: 5px;
+    background-color: green;
+}
+.txt{
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+}
