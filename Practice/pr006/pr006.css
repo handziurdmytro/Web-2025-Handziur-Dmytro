@@ -1,0 +1,56 @@
+p{
+    text-shadow: 1px -1px 8px black;
+}
+p:hover{
+    box-shadow: 1px -1px 8px blue;
+}
+
+a:link{
+    color: rgb(12, 99, 31);
+}
+a:visited{
+    color: rgb(232, 5, 5)
+}
+a:hover{
+    color: rgb(117, 167, 236)
+}
+a:active{
+    color: rgb(146, 29, 234)
+}
+button:hover{
+    color: rgb(96, 81, 15);
+    background-color: rgb(223, 204, 125);
+}
+li:nth-child(odd){
+    background-color: #fbe3d4;
+    color: #ff4f0d;
+}
+li:nth-child(even){
+    background-color: #d4fbfa;
+    color: #0d86ff;
+}
+p::first-letter{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+}
+p::first-line{
+    color: rgb(13, 51, 2);
+}
+li::before{
+    content: "❤";
+}
+#list1 li::before{
+    content: "✔";
+}
+#plum::after{
+    content:"🤺";
+}
+li::marker{
+    color: rgb(17, 117, 147);
+    content: "❄";
+}
+p::selection{
+    color: white;
+    background-color: cadetblue;
+}

@@ -1,5 +1,8 @@
 .background{
     background-color: #0065F8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 .header1 {
     font-family: 'Montserrat', sans-serif;
@@ -21,4 +24,15 @@
 .p1, .p2{
     width: 500px;
     height: 400px;
+}
+
+.photoset{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.photoset img{
+    width: 50%;
+    align-content: center;
+    height: auto;
 }

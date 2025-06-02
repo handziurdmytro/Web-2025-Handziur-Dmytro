@@ -1,0 +1,8 @@
+body{}
+h1, p{}
+img{
+    width: 270px;
+    height: 360px;
+    float: right;
+}
+#box1{}
