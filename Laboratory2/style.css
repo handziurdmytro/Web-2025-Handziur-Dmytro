@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background-color: #bdb9b9;
-    font-family: Arial, sans-serif;
     padding: 20px;
 }
 
@@ -23,22 +23,24 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
+    min-height: 200px;
 }
 
 .products-info-container {
+    display: grid;
     width: 300px;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
+    min-height: 200px;
 }
 
 .search-line {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .text-field {
@@ -80,11 +82,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.product-line:last-child {
-    border-bottom: none;
+    border-top: 1px solid #f0f0f0;
 }
 
 .product-info {
@@ -116,7 +114,7 @@ body {
     gap: 10px;
 }
 
-.quantity-btn {
+.quantity-btn{
     width: 36px;
     height: 36px;
     border: none;
@@ -129,7 +127,9 @@ body {
     justify-content: center;
     transition: all 0.3s ease;
 }
-
+.product-line.purchased button.quantity-btn{
+    visibility: hidden;
+}
 .quantity-btn.minus {
     background-color: #e74c3c;
     color: white;
@@ -148,13 +148,6 @@ body {
     background-color: #219a52;
 }
 
-.quantity-number {
-    font-size: 18px;
-    font-weight: 500;
-    min-width: 30px;
-    text-align: center;
-}
-
 .action-buttons {
     display: flex;
     gap: 10px;
@@ -168,31 +161,13 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-.bought-btn {
-    background-color: #e8f4fd;
-    color: #4a90e2;
-    border: 1px solid #4a90e2;
-}
-
-.bought-btn:hover {
-    background-color: #4a90e2;
-    color: white;
-}
-
-.bought-btn.purchased {
-    background-color: #d4edda;
-    color: #155724;
-    border-color: #27ae60;
-}
-
-.not-bought-btn {
+.bought-btn, .not-bought-btn {
     background-color: #f8f9fa;
     color: #6c757d;
     border: 1px solid #dee2e6;
 }
 
-.not-bought-btn:hover {
+.not-bought-btn:hover, .bought-btn:hover {
     background-color: #e9ecef;
 }
 
@@ -224,12 +199,12 @@ body {
 }
 
 .product-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f8f9fa;
     padding: 12px 16px;
-    border-radius: 25px;
+    border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.2s ease;
 }
@@ -237,13 +212,8 @@ body {
 .product-item:hover {
     transform: translateY(-2px);
 }
-
-.product-item.remaining {
-    background-color: #e8f4fd;
-}
-
-.product-item.purchased {
-    background-color: #d4edda;
+.product-item.purchased .product-item-name, .product-line.purchased .product-name{
+    text-decoration: line-through;
 }
 
 .product-item-name {
@@ -253,7 +223,7 @@ body {
 }
 
 .quantity-marker {
-    background-color: #ff6b35;
+    background-color: #ef5a1d;
     color: white;
     width: 24px;
     height: 24px;
@@ -263,19 +233,7 @@ body {
     justify-content: center;
     font-size: 14px;
     font-weight: bold;
-}
-
-.quantity-marker.cheese {
-    background-color: #ff8c42;
-}
-
-.quantity-marker.tomatoes {
-    background-color: #ff6b35;
-}
-
-.cheese-input {
-    background-color: #dddddd;
-    border: 2px solid #989898;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {

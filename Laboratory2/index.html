@@ -10,17 +10,21 @@
         <div class="flex-container">
             <div class="user-interaction-container">
                 <div class="search-line">
-                    <input type="text" class="text-field cheese-input" placeholder="Назва товару" value="Сир">
+                    <input type="text" class="text-field" placeholder="Назва товару">
                     <button class="add-button">Додати</button>
                 </div>
 
-                <div class="product-line">
+                <div class="product-line purchased">
                     <div class="product-info">
                         <div class="product-name">Помідори</div>
-                        <div class="quantity-display">2</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">−</button>
+                            <div class="quantity-display">2</div>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
                     </div>
                     <div class="action-buttons">
-                        <button class="action-btn not-bought-btn">Не куплено</button>
+                        <button class="action-btn not-bought-btn purchased">Не куплено</button>
                     </div>
                 </div>
 
@@ -29,12 +33,12 @@
                         <div class="product-name">Печиво</div>
                         <div class="quantity-controls">
                             <button class="quantity-btn minus">−</button>
-                            <span class="quantity-number">2</span>
+                            <div class="quantity-display">2</div>
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
                     <div class="action-buttons">
-                        <button class="action-btn bought-btn purchased">Куплено</button>
+                        <button class="action-btn bought-btn">Куплено</button>
                         <button class="action-btn delete-btn">×</button>
                     </div>
                 </div>
@@ -44,37 +48,37 @@
                         <div class="product-name">Сир</div>
                         <div class="quantity-controls">
                             <button class="quantity-btn minus">−</button>
-                            <span class="quantity-number">1</span>
+                            <span class="quantity-display">1</span>
                             <button class="quantity-btn plus">+</button>
                         </div>
                     </div>
                     <div class="action-buttons">
-                        <button class="action-btn bought-btn purchased">Куплено</button>
+                        <button class="action-btn bought-btn">Куплено</button>
                         <button class="action-btn delete-btn">×</button>
                     </div>
                 </div>
             </div>
 
             <div class="products-info-container">
-                <div class="category-section">
-                    <h2>Залишилося</h2>
+                <div>Залишилося</div>
 
+                <div class="category-section">
                     <div class="product-item remaining">
-                        <span class="product-item-name">Печиво</span>
+                        <div class="product-item-name">Печиво</div>
                         <div class="quantity-marker">2</div>
                     </div>
 
                     <div class="product-item remaining">
-                        <span class="product-item-name">Сир</span>
+                        <div class="product-item-name">Сир</div>
                         <div class="quantity-marker cheese">1</div>
                     </div>
                 </div>
 
-                <div class="category-section">
-                    <h2>Куплено</h2>
+                <div>Куплено</div>
 
+                <div class="category-section">
                     <div class="product-item purchased">
-                        <span class="product-item-name">Помідори</span>
+                        <div class="product-item-name">Помідори</div>
                         <div class="quantity-marker tomatoes">2</div>
                     </div>
                 </div>
