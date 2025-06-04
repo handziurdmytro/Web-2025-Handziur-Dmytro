@@ -9,7 +9,7 @@
     <body>
         <div class="flex-container">
             <div class="user-interaction-container">
-                <div class="search-line">
+                <div class="adding-line">
                     <input type="text" class="text-field" placeholder="Назва товару">
                     <button class="add-button" data-tooltip="Додати новий товар">Додати</button>
                 </div>
@@ -17,11 +17,11 @@
                 <div class="product-line purchased">
                     <div class="product-info">
                         <div class="product-name">Помідори</div>
-                        <div class="quantity-controls">
-                            <button class="quantity-btn minus" data-tooltip="Зменшити кількість">−</button>
-                            <div class="quantity-display">2</div>
-                            <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
-                        </div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus" data-tooltip="Зменшити кількість">−</button>
+                        <div class="quantity-display">2</div>
+                        <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
                     </div>
                     <div class="action-buttons">
                         <button class="action-btn not-bought-btn purchased" data-tooltip="Повернути в список покупок">Не куплено</button>
@@ -31,11 +31,11 @@
                 <div class="product-line">
                     <div class="product-info">
                         <div class="product-name">Печиво</div>
-                        <div class="quantity-controls">
-                            <button class="quantity-btn minus" data-tooltip="Зменшити кількість">−</button>
-                            <div class="quantity-display">2</div>
-                            <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
-                        </div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus" data-tooltip="Зменшити кількість">−</button>
+                        <div class="quantity-display">2</div>
+                        <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
                     </div>
                     <div class="action-buttons">
                         <button class="action-btn bought-btn" data-tooltip="Позначити як куплене">Куплено</button>
@@ -45,12 +45,14 @@
 
                 <div class="product-line">
                     <div class="product-info">
-                        <div class="product-name">Сир</div>
-                        <div class="quantity-controls">
-                            <button class="quantity-btn minus" data-tooltip="Зменшити кількість">−</button>
-                            <span class="quantity-display">1</span>
-                            <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
+                        <div>
+                            <input type="text" class="text-field-product product-name" value="Сир">
                         </div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus last" data-tooltip="Зменшити кількість" disabled>−</button>
+                        <span class="quantity-display">1</span>
+                        <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
                     </div>
                     <div class="action-buttons">
                         <button class="action-btn bought-btn" data-tooltip="Позначити як куплене">Куплено</button>
@@ -91,7 +93,8 @@
 
         <div class="badge">
             <span class="badge-title">BuyList</span>
-            <span class="badge-author">Created by Student Name</span>
+            <span class="badge-text">Created by:</span>
+            <span class="badge-author">Handziur Dmytro</span>
         </div>
     </body>
 </html>

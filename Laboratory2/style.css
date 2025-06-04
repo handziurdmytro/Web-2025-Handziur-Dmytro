@@ -41,9 +41,9 @@ body {
     font-weight: 600;
 }
 
-.search-line {
+.adding-line {
     display: flex;
-    gap: 10px;
+    gap: 0;
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
@@ -52,7 +52,8 @@ body {
     flex: 1;
     padding: 12px 16px;
     border: 2px solid #e1e5e9;
-    border-radius: 6px;
+    border-radius: 6px 0 0 6px;
+    border-right: none;
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s ease;
@@ -66,12 +67,27 @@ body {
     color: #999;
 }
 
+.text-field-product {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    max-width: 120px;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.text-field-product:focus {
+    border-color: #707070;
+}
+
 .add-button {
     background-color: #4a90e2;
     color: white;
     border: none;
     padding: 12px 24px;
-    border-radius: 6px;
+    border-radius: 0 6px 6px 0;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -84,7 +100,8 @@ body {
 }
 
 .product-line {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
@@ -117,7 +134,6 @@ body {
 .quantity-controls {
     display: flex;
     align-items: center;
-    align-content: center;
     gap: 10px;
 }
 
@@ -142,6 +158,10 @@ body {
     background-color: #e74c3c;
     color: white;
 }
+.quantity-btn.minus.last {
+    background-color: #c0392b;
+    color: white;
+}
 
 .quantity-btn.minus:hover {
     background-color: #c0392b;
@@ -158,6 +178,7 @@ body {
 
 .action-buttons {
     display: flex;
+    justify-self: end;
     gap: 10px;
 }
 
@@ -244,22 +265,24 @@ body {
 
 .badge {
     position: fixed;
-    bottom: 0;
-    left: 20px;
+    font-size: 24px;
+    bottom: -40px;
+    left: 50px;
     background-color: #6f42c1;
     color: white;
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
     transition: transform 1s ease, background-color 1s ease;
     overflow: hidden;
-    height: 40px;
+    height: 90px;
 }
 
 .badge:hover {
-    height: 70px;
-    background-color: #5a32a3;
+    transform: translateY(-40px);
+    background-color: #051eb3;
 }
 
 .badge-title {
@@ -269,12 +292,19 @@ body {
 
 .badge-author {
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.badge:hover .badge-author {
+.badge-text {
+    display: block;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.badge:hover .badge-author, .badge:hover .badge-text{
     opacity: 1;
 }
 
@@ -300,7 +330,7 @@ body {
     margin-bottom: 5px;
 }
 
-[data-tooltip]:hover::after {
+[data-tooltip]:not(.last):hover::after {
     transform: translateX(-50%) scale(1);
     opacity: 1;
 }
@@ -348,6 +378,11 @@ body {
 
     .badge-title {
         display: none;
+    }
+
+    .badge-text {
+        display: block !important;
+        opacity: 1 !important;
     }
 
     .badge-author {
